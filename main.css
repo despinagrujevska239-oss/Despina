@@ -1,0 +1,276 @@
+/* Fonts */
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/MontserratAlternates-Light.woff2);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/MontserratAlternates-Regular.woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/MontserratAlternates-Medium.woff2);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/MontserratAlternates-SemiBold.woff2);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/MontserratAlternates-Bold.woff2);
+  font-weight: 700;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Montserrat";
+}
+
+body {
+  background-color: #FCF9F7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 5px 50px;
+  border-bottom: 2px solid #7C3AED;
+  background-color: #FCF9F7;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+nav a {
+  cursor: pointer;
+  position: relative;
+  width: fit-content;
+  padding-bottom: 5px;
+  overflow: hidden;
+  color: #000000;
+}
+
+nav a.active {
+  color: #7C3AED;
+}
+
+nav a.active:before {
+  transform: translateX(0);
+}
+
+nav a:before {
+  content: "";
+  width: calc(100% + 8px);
+  border-bottom: 2px solid #7C3AED;
+  height: 2px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  transform: translateX(-100%);
+  transition: transform .5s ease-in-out;
+}
+
+nav a:hover:before {
+  transform: translateX(0);
+  transition: transform .5s ease-in-out;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+  background-color: #7C3AED80;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-contacts {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Hero */
+.hero-section-top {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-info {
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h1 {
+  color: #7C3AED;
+  font-size: 36px;
+}
+
+h2 {
+  color: #7C3AED;
+  font-size: 28px;
+
+}
+
+p {
+  color: #7C3AED;
+  font-size: 18px;
+}
+
+.hero-points {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.hp {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+#projects {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.project-item {
+  display: flex;
+  gap: 15px;
+  background-color: #7C3AED99;
+  padding: 15px;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.project-info h2,
+.project-info p {
+  color: #000000;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+/* Case Study */
+
+.p-hero {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #7C3AED80;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 50px 0;
+}
+
+.p-hero-info,
+.p-hero-role {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.p-hero-info h2,
+.p-hero-role h2 {
+  color: #FFFFFF;
+  font-size: 28px;
+  margin-top: 15px;
+}
+
+.p-hero-info span,
+.p-hero-role span {
+  color: #FFFFFF;
+  font-size: 24px;
+}
+
+.p-info {
+  padding: 50px;
+}
+
+.p-info h2 {
+  margin: 30px 0 15px;
+}
+
+.p-info ul {
+  margin-left: 30px;
+}
+
+.p-info li {
+  color: #7C3AED;
+  font-size: 18px;
+  list-style: disc;
+  padding-bottom: 10px;
+}
+
+.p-elements img {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.p-elements {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.subtitle-orange {
+  color: #FF7A3D;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+header.header-hidden {
+  transform: translateY(-100%);
+}
